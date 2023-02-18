@@ -155,10 +155,10 @@ function SingleMovie() {
       </div>
       <div style={{ padding: "1rem " }}>
         <h2>You might also Like</h2>
-        <div className="similar_imgContainer">
+        <div className="card">
           {similar.map(item => (
             <div key={item.id}>
-              <img src={`${baseImgUrl}${item.poster_path}`} style={{ height: "340px", objectFit: "contain" }}
+              <img src={`${baseImgUrl}${item.poster_path}`} 
                 alt="a movie"
                 loading="lazy"
                 onClick={() => navigate(`/${params.type}/${item.id}`, { replace: true })}
