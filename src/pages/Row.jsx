@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const baseImgUrl = "https://image.tmdb.org/t/p/original";
 
-const Row = ({ title, apiUrl, isLargeRow, isMovie }) => {
+const Row = ({ title, apiUrl, isMovie }) => {
   const [movies, setMovies] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState("");
 
@@ -34,21 +34,20 @@ const Row = ({ title, apiUrl, isLargeRow, isMovie }) => {
     <div className="row">
       <h2>{title}</h2>
 
-      <div className="row__posters">
+      <div>
         {movies.map((movie) => (
           <Link
             to={`/${isMovie ? "movie" : "tv"}/${movie.id}`}
-            className="link"
+            className="link card"
             key={movie.id}
           >
             <img
               // onClick={() => handleClick(movie)}
               loading="lazy"
               src={`${baseImgUrl}${
-                isLargeRow ? movie.poster_path : movie.backdrop_path
+                 movie.backdrop_path
               }`}
               alt={movie.name}
-              className={`row__poster ${isLargeRow && "row__posterLarge"}`}
             />
           </Link>
         ))}

@@ -168,23 +168,7 @@
 }
 
 
-.similar_imgContainer{
-  
-    display: flex;
-     overflow-y: hidden;
-    overflow-x: scroll;
-     gap: 1rem;
-  
-  /* background-color: red; */
-  padding:20px 5px;
-}
-.similar_imgContainer img{
-  border-radius: 15px;
-}
 
-.similar_imgContainer::-webkit-scrollbar{
-  display: none;
-}
 
 .movie-trailer{
   display: flex;
@@ -193,24 +177,3 @@
   padding: 1rem .1rem;
 }
 
-.card{
-  
-  display: flex;
-   overflow-y: hidden;
-  overflow-x: scroll;
-   gap: 1rem;
-
-/* background-color: red; */
-padding:20px 5px;
-}
-.card img{
-  border-radius: 15px;
-  height: 340px;
-  object-fit: contain;
-}
-
-@media screen and (max-width:480px){
-  .card img{
-    height:200px
-  }
-}

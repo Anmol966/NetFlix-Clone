@@ -8,10 +8,10 @@ function Body() {
   return (
     <div>
       <Banner />
-      <Row title="Trending Now Movies" apiUrl={requests.fetchPopularMovie} isLargeRow isMovie />
-      <Row title="Top Rated TV" apiUrl={requests.fetchPopularTv} isLargeRow />
-      <Row title="Top Rated Movies" apiUrl={requests.fetchTopRatedMovie} isMovie isLargeRow />
-      <Row title="Top Rated TV" apiUrl={requests.fetchTopRatedTv} isLargeRow />
+      <Row title="Trending Now Movies" apiUrl={requests.fetchPopularMovie}  isMovie />
+      <Row title="Top Rated TV" apiUrl={requests.fetchPopularTv}  />
+      <Row title="Top Rated Movies" apiUrl={requests.fetchTopRatedMovie} isMovie  />
+      <Row title="Top Rated TV" apiUrl={requests.fetchTopRatedTv}  />
     </div>
   )
 }

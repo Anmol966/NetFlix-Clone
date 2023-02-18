@@ -154,7 +154,7 @@ function SingleMovie() {
         })}
       </div>
       <div style={{ padding: "1rem " }}>
-        <h2>You might also Like (testing...)</h2>
+        <h2>You might also Like </h2>
         <div className="card">
           {similar.map(item => (
             <div key={item.id}>
