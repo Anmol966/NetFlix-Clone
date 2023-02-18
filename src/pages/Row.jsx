@@ -19,6 +19,7 @@ const Row = ({ title, apiUrl, isMovie }) => {
       setMovies(request.data.results);
     };
     fetchData();
+    console.log(movies)
   }, [apiUrl]);
 
   const opts = {
@@ -34,18 +35,18 @@ const Row = ({ title, apiUrl, isMovie }) => {
     <div className="row">
       <h2>{title}</h2>
 
-      <div>
+      <div className="cardContainer">
         {movies.map((movie) => (
           <Link
             to={`/${isMovie ? "movie" : "tv"}/${movie.id}`}
-            className="link card"
+            
             key={movie.id}
           >
             <img
               // onClick={() => handleClick(movie)}
               loading="lazy"
               src={`${baseImgUrl}${
-                 movie.backdrop_path
+                 movie.poster_path
               }`}
               alt={movie.name}
             />

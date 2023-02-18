@@ -155,9 +155,9 @@ function SingleMovie() {
       </div>
       <div style={{ padding: "1rem " }}>
         <h2>You might also Like </h2>
-        <div className="card">
+        <div className="cardContainer">
           {similar.map(item => (
-            <div key={item.id}>
+            <div key={item.id} >
               <img src={`${baseImgUrl}${item.poster_path}`} 
                 alt="a movie"
                 loading="lazy"

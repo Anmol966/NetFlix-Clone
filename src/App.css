@@ -8,28 +8,29 @@
   background-color: #111;
 }
 
-.card{
+.cardContainer{
   display: flex;
   overflow-y: hidden;
   overflow-x: scroll;
   gap: 1rem;
   padding:20px 5px;
 }
-.card:hover{
+
+.cardContainer img{
+  border-radius: 15px;
+  height: 300px;
+  object-fit: cover;
+}
+.cardContainer img:hover{
   transform: scale(1.08);
 }
-.card img{
-  border-radius: 15px;
-  height: 340px;
-  object-fit: contain;
-}
 
-.card::-webkit-scrollbar{
+.cardContainer::-webkit-scrollbar{
   display: none;
 }
 
 @media screen and (max-width:480px){
-  .card img{
+  .cardContainer img{
     height:200px
   }
 }
