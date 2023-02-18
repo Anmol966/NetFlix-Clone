@@ -15,11 +15,9 @@ const Row = ({ title, apiUrl, isMovie }) => {
   useEffect(() => {
     const fetchData = async () => {
       const request = await axios.get(apiUrl);
-      console.log(request);
       setMovies(request.data.results);
     };
     fetchData();
-    console.log(movies)
   }, [apiUrl]);
 
   const opts = {
@@ -30,7 +28,6 @@ const Row = ({ title, apiUrl, isMovie }) => {
     },
   };
 
-  console.log(movies);
   return (
     <div className="row">
       <h2>{title}</h2>

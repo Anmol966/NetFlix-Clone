@@ -20,7 +20,6 @@ const Movie = () => {
   useEffect(() => {
     const fetchData = async () => {
       const request = await axios.get(movieUrl);
-      // console.log(request);
       setMovies(request.data.results);
     };
     fetchData();

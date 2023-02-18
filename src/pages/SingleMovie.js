@@ -20,7 +20,6 @@ function SingleMovie() {
   let navigate = useNavigate()
 
   const params = useParams()
-  console.log(params)
   const api_key = "8a2705651c885ab1d285fc80ee1021c5"
   const movieUrl = `https://api.themoviedb.org/3/${params.type}/${params.movieId}?api_key=${api_key}&language=en-US&append_to_response=videos`
   const castUrl = `https://api.themoviedb.org/3/${params.type}/${params.movieId}/credits?api_key=${api_key}&language=en-US`
@@ -28,10 +27,8 @@ function SingleMovie() {
   const youtubeUrl = `https://api.themoviedb.org/3/${params.type}/${params.movieId}?api_key=${api_key}&append_to_response=videos`
   // let dummy = []
   // let movieKey = []
-  console.log('first')
   useEffect(() => {
     setIsLoading(true)
-    console.log(movieUrl)
     const fetchMovieDetails = async () => {
       try {
         const res = await fetch(movieUrl)
@@ -69,11 +66,8 @@ function SingleMovie() {
       const res = await fetch(youtubeUrl)
       const data = await res.json()
 
-      // console.log(data.videos.results)
       const filterMovie = data.videos.results.filter(item => item.type === "Trailer")
-      console.log(filterMovie)
       setKey(filterMovie)
-      console.log(key)
     }
     fetchYoutube()
 
@@ -94,8 +88,6 @@ function SingleMovie() {
     return <h1>Loading....</h1>
   }
 
-  // return <h1>single movie</h1>
-  console.log(movieInfo)
   return (
     <>
       <div className='single'>

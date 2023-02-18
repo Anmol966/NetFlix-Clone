@@ -14,7 +14,7 @@ const Nav = () => {
       }
     });
     return () => {
-      window.removeEventListener("scroll", () => console.log("first"));
+      window.removeEventListener("scroll", () => {});
     };
   }, []);
   return (
