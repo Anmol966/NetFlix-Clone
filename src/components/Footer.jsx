@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 import bg from "../assests/footer-bg.jpg";
-import logo from "../assests/tmovie.png";
 import "./Footer.css";
 
 const Footer = () => {
@@ -10,10 +9,14 @@ const Footer = () => {
       <div className="footer__content container">
         <div className="footer__content__logo">
           <div className="logo">
-            <img src={logo} alt="" />
-            <Link to="/" className="logo_text">
-              NetFlix 
-            </Link>
+            <Link to={"/"}>
+          <img
+            src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg"
+            style={{width:'200px'}}
+            alt="netflix logo"
+            loading="lazy"
+          />
+        </Link>
           </div>
         </div>
         <div className="footer__content__menus">
